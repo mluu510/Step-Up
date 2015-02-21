@@ -14,6 +14,9 @@
 		37FBB0691A97F3DF00AC75D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FBB0681A97F3DF00AC75D4 /* Images.xcassets */; };
 		37FBB06C1A97F3DF00AC75D4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37FBB06A1A97F3DF00AC75D4 /* LaunchScreen.xib */; };
 		37FBB0781A97F3DF00AC75D4 /* Step_UpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FBB0771A97F3DF00AC75D4 /* Step_UpTests.m */; };
+		37FBB0821A97F82500AC75D4 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FBB0811A97F82500AC75D4 /* HealthKit.framework */; };
+		37FBB08D1A9849B700AC75D4 /* libPXAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FBB08A1A98496A00AC75D4 /* libPXAPI.a */; };
+		37FBB0961A98550A00AC75D4 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FBB0951A98550A00AC75D4 /* PhotoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +26,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 37FBB0571A97F3DF00AC75D4;
 			remoteInfo = "Step Up";
+		};
+		37FBB0891A98496A00AC75D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37FBB0841A98496A00AC75D4 /* PXAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5EB9AFC415C34F3F002E7F6D;
+			remoteInfo = PXAPI;
+		};
+		37FBB08B1A98496A00AC75D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37FBB0841A98496A00AC75D4 /* PXAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5EB9AFD515C34F3F002E7F6D;
+			remoteInfo = tests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -40,6 +57,11 @@
 		37FBB0711A97F3DF00AC75D4 /* Step UpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Step UpTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FBB0761A97F3DF00AC75D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37FBB0771A97F3DF00AC75D4 /* Step_UpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Step_UpTests.m; sourceTree = "<group>"; };
+		37FBB0811A97F82500AC75D4 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		37FBB0831A97F82500AC75D4 /* Step Up.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Step Up.entitlements"; sourceTree = "<group>"; };
+		37FBB0841A98496A00AC75D4 /* PXAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PXAPI.xcodeproj; path = "500px-iOS-api/PXAPI.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		37FBB0941A98550A00AC75D4 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		37FBB0951A98550A00AC75D4 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37FBB0821A97F82500AC75D4 /* HealthKit.framework in Frameworks */,
+				37FBB08D1A9849B700AC75D4 /* libPXAPI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +87,7 @@
 		37FBB04F1A97F3DF00AC75D4 = {
 			isa = PBXGroup;
 			children = (
+				37FBB0811A97F82500AC75D4 /* HealthKit.framework */,
 				37FBB05A1A97F3DF00AC75D4 /* Step Up */,
 				37FBB0741A97F3DF00AC75D4 /* Step UpTests */,
 				37FBB0591A97F3DF00AC75D4 /* Products */,
@@ -81,13 +106,17 @@
 		37FBB05A1A97F3DF00AC75D4 /* Step Up */ = {
 			isa = PBXGroup;
 			children = (
+				37FBB0831A97F82500AC75D4 /* Step Up.entitlements */,
 				37FBB05F1A97F3DF00AC75D4 /* AppDelegate.h */,
 				37FBB0601A97F3DF00AC75D4 /* AppDelegate.m */,
 				37FBB0621A97F3DF00AC75D4 /* ViewController.h */,
 				37FBB0631A97F3DF00AC75D4 /* ViewController.m */,
+				37FBB0941A98550A00AC75D4 /* PhotoViewController.h */,
+				37FBB0951A98550A00AC75D4 /* PhotoViewController.m */,
 				37FBB0651A97F3DF00AC75D4 /* Main.storyboard */,
 				37FBB0681A97F3DF00AC75D4 /* Images.xcassets */,
 				37FBB06A1A97F3DF00AC75D4 /* LaunchScreen.xib */,
+				37FBB0841A98496A00AC75D4 /* PXAPI.xcodeproj */,
 				37FBB05B1A97F3DF00AC75D4 /* Supporting Files */,
 			);
 			path = "Step Up";
@@ -117,6 +146,15 @@
 				37FBB0761A97F3DF00AC75D4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37FBB0851A98496A00AC75D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37FBB08A1A98496A00AC75D4 /* libPXAPI.a */,
+				37FBB08C1A98496A00AC75D4 /* tests.octest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +206,12 @@
 				TargetAttributes = {
 					37FBB0571A97F3DF00AC75D4 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = A6K47EHG3P;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					37FBB0701A97F3DF00AC75D4 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -186,6 +230,12 @@
 			mainGroup = 37FBB04F1A97F3DF00AC75D4;
 			productRefGroup = 37FBB0591A97F3DF00AC75D4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 37FBB0851A98496A00AC75D4 /* Products */;
+					ProjectRef = 37FBB0841A98496A00AC75D4 /* PXAPI.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				37FBB0571A97F3DF00AC75D4 /* Step Up */,
@@ -193,6 +243,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		37FBB08A1A98496A00AC75D4 /* libPXAPI.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPXAPI.a;
+			remoteRef = 37FBB0891A98496A00AC75D4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		37FBB08C1A98496A00AC75D4 /* tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = tests.octest;
+			remoteRef = 37FBB08B1A98496A00AC75D4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		37FBB0561A97F3DF00AC75D4 /* Resources */ = {
@@ -220,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37FBB0641A97F3DF00AC75D4 /* ViewController.m in Sources */,
+				37FBB0961A98550A00AC75D4 /* PhotoViewController.m in Sources */,
 				37FBB0611A97F3DF00AC75D4 /* AppDelegate.m in Sources */,
 				37FBB05E1A97F3DF00AC75D4 /* main.m in Sources */,
 			);
@@ -343,9 +411,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Step Up/Step Up.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/**",
+				);
 				INFOPLIST_FILE = "Step Up/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -353,9 +431,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Step Up/Step Up.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/**",
+				);
 				INFOPLIST_FILE = "Step Up/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -412,6 +500,7 @@
 				37FBB07D1A97F3DF00AC75D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37FBB07E1A97F3DF00AC75D4 /* Build configuration list for PBXNativeTarget "Step UpTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +509,7 @@
 				37FBB0801A97F3DF00AC75D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
